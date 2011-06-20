@@ -47,7 +47,7 @@ class Checkers {
 			return false;
 	}
 	
-	public static Boolean CheckInBounds(int row, int col){		//checks for both row and col to be in bounds
+	public static boolean CheckInBounds(int row, int col){		//checks for both row and col to be in bounds
 		if (row >= 0 && row <= 7 && col >= 0 && row <= 7) {		//8x8 grid
 			System.out.print(row + "," + col + " is in bounds, ");	//print the outcome of the test for debug purposes
 			return true;
@@ -57,7 +57,7 @@ class Checkers {
 			return false;
 	}
 	
-	public static Boolean CheckLegal(int initalRow, int initalCol, int proposedRow, int proposedCol) {	//checks for a legal one-space diagonal move. Does not allow jumping
+	public static boolean CheckLegal(int initalRow, int initalCol, int proposedRow, int proposedCol) {	//checks for a legal one-space diagonal move. Does not allow jumping
 		int rowChange = Math.abs(initalRow-proposedRow);
 		int colChange = Math.abs(initalCol-proposedCol);
 		if (rowChange==1 && colChange==1) { //must move one unit diagonally 
